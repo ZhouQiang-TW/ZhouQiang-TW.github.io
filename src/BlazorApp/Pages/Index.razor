@@ -1,4 +1,6 @@
 ﻿@page "/"
+@inject IJSRuntime JS
+@implements IAsyncDisposable
 
 <PageTitle>Home</PageTitle>
 
@@ -34,3 +36,27 @@
         </ItemContent>
     </MudTimelineItem>
 </MudTimeline>
+
+
+@code {
+    private Lazy<IJSObjectReference> IndexModule = new();
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var module = await JS.InvokeAsync<IJSObjectReference>("import", "./Pages/Index.razor.js");
+            IndexModule = new Lazy<IJSObjectReference>(module);
+            await IndexModule.Value.InvokeVoidAsync("SayHelloCS");
+        }
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        if (IndexModule.IsValueCreated)
+        {
+            await IndexModule.Value.DisposeAsync();
+        }
+    }
+}
+
