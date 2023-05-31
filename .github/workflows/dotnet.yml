@@ -27,7 +27,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish {YourSolution}.sln -c:Release -o:publish -p:GHPages=true
+      run: dotnet publish HelloWorld.sln -c:Release -o:publish -p:GHPages=true
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
