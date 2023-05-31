@@ -5,7 +5,7 @@
       "url": "Pages\/Gallery.razor.js"
     },
     {
-      "hash": "sha256-rb14zIRmzOIFlv2p8RWPP\/Javmb6YHliNWkLRsYeRP0=",
+      "hash": "sha256-wqnuke1WHuvRKOxGQkckQQ3yPo\/gCVqH8bfN+mkzSXU=",
       "url": "Pages\/Index.razor.js"
     },
     {
@@ -65,11 +65,15 @@
       "url": "_framework\/icudt.dat.br"
     },
     {
-      "hash": "sha256-kUY\/KWCk5ut\/5V3w95NnQMW\/gDAyVK6DNrUMI9azblg=",
+      "hash": "sha256-0099HZMmk65NzZMOCiSeLQK7yR1E0pjhSEc0J2TP+7c=",
       "url": "_framework\/blazor.boot.json.br"
     },
     {
-      "hash": "sha256-Rd3bM+CbpN2FCuGA3PV8mZ4NImBqE4TlbR9O4+SukSg=",
+      "hash": "sha256-KTThFC2XF8Ker9AVHi1fHmSdK+d53hcXecRPKqpFKHM=",
+      "url": "_framework\/BlazorApp.Core.dll.br"
+    },
+    {
+      "hash": "sha256-bYlMAwmqGQJ65RePDlQm7OPn7IvUic4YfaIQkKMhxt4=",
       "url": "_framework\/BlazorApp.dll.br"
     },
     {
@@ -101,7 +105,7 @@
       "url": "_framework\/Microsoft.Extensions.Configuration.Json.dll.br"
     },
     {
-      "hash": "sha256-G6zG9uaJBKyZ4lwscNnvUAXPBwIjI13rFcg7HPM3exw=",
+      "hash": "sha256-l0EqFZqHa1IIG0S\/zQr2blS3sy\/Rw0E9vDRs+VixYDI=",
       "url": "_framework\/Microsoft.Extensions.DependencyInjection.Abstractions.dll.br"
     },
     {
@@ -137,11 +141,15 @@
       "url": "_framework\/MudBlazor.dll.br"
     },
     {
+      "hash": "sha256-MF0bxE55yace8bxL5lCWUQeryrQTGilDQvR+J4D4YOo=",
+      "url": "_framework\/netstandard.dll.br"
+    },
+    {
       "hash": "sha256-4JRRBbH56BkuvIFxfHexswoWWbV0AkkxPomCU6pyKIg=",
       "url": "_framework\/System.Collections.Concurrent.dll.br"
     },
     {
-      "hash": "sha256-+D9QFUyiilHcqYVSDdVH2gMLuakEl\/5McNDoQqx875w=",
+      "hash": "sha256-ta+Mbq+q9uYYiQ4ILNorruT9vjvz8qjluBEybI\/rdt4=",
       "url": "_framework\/System.Collections.dll.br"
     },
     {
@@ -197,7 +205,7 @@
       "url": "_framework\/System.ObjectModel.dll.br"
     },
     {
-      "hash": "sha256-++uKHAdOc016Q12mJ7xoBb1OXjTuu7Njj4q54kGTPEA=",
+      "hash": "sha256-f8ZCiyumcYlyha4K1hj5DxPzakbYElSnNYmMnLvyy1M=",
       "url": "_framework\/System.Private.CoreLib.dll.br"
     },
     {
@@ -213,7 +221,7 @@
       "url": "_framework\/System.Runtime.CompilerServices.Unsafe.dll.br"
     },
     {
-      "hash": "sha256-XSxTMCNvIvGdSiSn0TvlOrahTbtmY\/SqGB2gR+JI59g=",
+      "hash": "sha256-Hwd8KI0QfStyGT7b9OwRgf44FfmGTvSzSGEbkl3\/1q8=",
       "url": "_framework\/System.Runtime.dll.br"
     },
     {
@@ -245,5 +253,5 @@
       "url": "brotliloader.min.js"
     }
   ],
-  "version": "qodURuEm"
+  "version": "b\/ZDEivK"
 };
