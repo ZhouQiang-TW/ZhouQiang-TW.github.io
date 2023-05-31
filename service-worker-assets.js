@@ -1,6 +1,18 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
+      "hash": "sha256-l8wQTuHvSgx1p28DsJT1O9vM8M6XV\/KBqUY3ykQ0abo=",
+      "url": "Pages\/Gallery.razor.js"
+    },
+    {
+      "hash": "sha256-rb14zIRmzOIFlv2p8RWPP\/Javmb6YHliNWkLRsYeRP0=",
+      "url": "Pages\/Index.razor.js"
+    },
+    {
+      "hash": "sha256-47DEQpj8HBSa+\/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+      "url": "Pages\/Portfolio.razor.js"
+    },
+    {
       "hash": "sha256-8kNQh+LErZHx3sMz237BHWFasAGQ88EWakJrWWYOxTA=",
       "url": "favicon.ico"
     },
@@ -53,11 +65,11 @@
       "url": "_framework\/icudt.dat.br"
     },
     {
-      "hash": "sha256-0s4T5A+HReG5Mj7I1nmKGuMwxKPEeOqgji1d9tTxi4M=",
+      "hash": "sha256-kUY\/KWCk5ut\/5V3w95NnQMW\/gDAyVK6DNrUMI9azblg=",
       "url": "_framework\/blazor.boot.json.br"
     },
     {
-      "hash": "sha256-4QzAdYpcwZ9K4nFJEhNH35Je8fC4vIx09K8NDWpkJDc=",
+      "hash": "sha256-Rd3bM+CbpN2FCuGA3PV8mZ4NImBqE4TlbR9O4+SukSg=",
       "url": "_framework\/BlazorApp.dll.br"
     },
     {
@@ -113,7 +125,7 @@
       "url": "_framework\/Microsoft.Extensions.Primitives.dll.br"
     },
     {
-      "hash": "sha256-ANbr0EA01RpyO4tMilT7abU7FtCrg\/7vYjZGba3MahQ=",
+      "hash": "sha256-ZUH881J1gyWZRTLdpDcqqPjZeUPFN0fp+dZ7kHbRgsY=",
       "url": "_framework\/Microsoft.JSInterop.dll.br"
     },
     {
@@ -185,7 +197,7 @@
       "url": "_framework\/System.ObjectModel.dll.br"
     },
     {
-      "hash": "sha256-EVVYzkzryi0MAcyWzY8NEdbjOKpokORGOGsDh5K6EfE=",
+      "hash": "sha256-++uKHAdOc016Q12mJ7xoBb1OXjTuu7Njj4q54kGTPEA=",
       "url": "_framework\/System.Private.CoreLib.dll.br"
     },
     {
@@ -201,7 +213,7 @@
       "url": "_framework\/System.Runtime.CompilerServices.Unsafe.dll.br"
     },
     {
-      "hash": "sha256-TcSan72YJIC308olxa2S0w8I5fT53fhaUG\/OLr\/dvaY=",
+      "hash": "sha256-XSxTMCNvIvGdSiSn0TvlOrahTbtmY\/SqGB2gR+JI59g=",
       "url": "_framework\/System.Runtime.dll.br"
     },
     {
@@ -233,5 +245,5 @@
       "url": "brotliloader.min.js"
     }
   ],
-  "version": "baz4AG49"
+  "version": "qodURuEm"
 };
