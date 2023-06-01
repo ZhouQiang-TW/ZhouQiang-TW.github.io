@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-l8wQTuHvSgx1p28DsJT1O9vM8M6XV\/KBqUY3ykQ0abo=",
+      "hash": "sha256-XXf2fs\/u3+aGLmVvtOe+4FxZpPlZ7DRooYZskKNqXWg=",
       "url": "Shared\/MainLayout.razor.js"
     },
     {
@@ -57,7 +57,7 @@
       "url": "_framework\/icudt.dat.br"
     },
     {
-      "hash": "sha256-6VjihiGV1WFZy4IytwrDwGc9vWFgvKwNXRoFdWZIzGo=",
+      "hash": "sha256-OUIl6IjojbKAASOznIqPAB51pe9W2WXHyxNKUXYD7Mk=",
       "url": "_framework\/blazor.boot.json.br"
     },
     {
@@ -65,7 +65,7 @@
       "url": "_framework\/BlazorApp.Core.dll.br"
     },
     {
-      "hash": "sha256-Aa8X6QflOcCbSQLWdaVVvyEC022c+PBfAO7gWbDa\/H8=",
+      "hash": "sha256-O5a8DI686DnQBq\/5z4twUqaegXs9pNOTfpUYYzuw0tc=",
       "url": "_framework\/BlazorApp.dll.br"
     },
     {
@@ -1349,5 +1349,5 @@
       "url": "brotliloader.min.js"
     }
   ],
-  "version": "69lZ1Dsd"
+  "version": "VQEO1drm"
 };
