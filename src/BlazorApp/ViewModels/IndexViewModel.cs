@@ -1,13 +1,8 @@
-﻿namespace BlazorApp.Pages;
+﻿using BlazorApp.Models;
 
-public class TimeLine
-{
-    public int Year { get; init; }
-    public string Info { get; init; }
-    public string Desc { get; init; }
-}
+namespace BlazorApp.ViewModels;
 
-public class IndexRazor
+public class IndexViewModel
 {
     public async Task<List<TimeLine>> FetchDataAsync()
     {

@@ -1,5 +1,5 @@
 ﻿@page "/portfolio"
-@inject PortfolioRazor Http
+@inject PortfolioViewModel ViewModel
 
 <PageTitle>Portfolio</PageTitle>
 
@@ -36,7 +36,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        var items = await Http.FetchDataAsync();
+        var items = await ViewModel.FetchDataAsync();
         forecasts.AddRange(items);
     }
 

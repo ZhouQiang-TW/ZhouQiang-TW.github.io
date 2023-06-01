@@ -1,17 +1,25 @@
 ﻿@page "/gallery"
-
+@inject GalleryViewModel ViewModel
 <PageTitle>Gallery</PageTitle>
 
 <MudText Typo="Typo.h3" GutterBottom="true">Gallery</MudText>
 <MudText Class="mb-8">This component demonstrates fetching data from the bing!</MudText>
-<MudText Class="mb-4">Current count: @currentCount</MudText>
-<MudButton Color="Color.Primary" Variant="Variant.Filled" @onclick="IncrementCount">Click me</MudButton>
+<MudGrid>
+    @foreach (var wallpaper in wallpapers)
+    {
+        <MudItem Style="display:flex;">
+            <MudCard>
+                <MudCardMedia Image="https://www.bing.com/th?id=OHR.WorldOtterDay_EN-US4690332709_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp" Height="200"/>
+                <MudCardContent>
+                    <MudText Typo="Typo.h5">2023-06-01</MudText>
+                    <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+    }
+</MudGrid>
 
 @code {
-    private int currentCount = 0;
 
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
+    private List<object> wallpapers { get; } = new();
 }

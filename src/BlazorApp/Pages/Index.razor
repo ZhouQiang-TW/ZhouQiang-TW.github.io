@@ -1,5 +1,5 @@
 ﻿@page "/"
-@inject IndexRazor Http
+@inject IndexViewModel ViewModel
 
 <PageTitle>Home</PageTitle>
 
@@ -32,7 +32,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        var items = await Http.FetchDataAsync();
+        var items = await ViewModel.FetchDataAsync();
         itemSource.AddRange(items);
     }
 }
