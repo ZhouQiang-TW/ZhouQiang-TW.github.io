@@ -1,4 +1,6 @@
 ﻿@inherits LayoutComponentBase
+@inject IJSRuntime JS
+@implements IAsyncDisposable
 
 <MudThemeProvider />
 <MudDialogProvider />
@@ -24,25 +26,37 @@
     </MudMainContent>
     <MudAppBar Class="align-center" Bottom="true" Fixed="true" Elevation="1">
         <MudElement>Copyright © @_year Share the ❤️ via hippieZhou</MudElement>
-        <MudText Typo="Typo.caption">Powered by .NET @_runTime</MudText>
     </MudAppBar>
 </MudLayout>
 
 @code {
     private bool _drawerOpen = true;
+    private Lazy<IJSObjectReference> MainLayoutModule = new();
     private int _year;
-    private string _runTime;
 
     void DrawerToggle()
     {
         _drawerOpen = !_drawerOpen;
     }
 
-    protected override Task OnInitializedAsync()
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        _year = DateTime.Now.Year;
-        _runTime = System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription;
-        return base.OnInitializedAsync();
+        if (firstRender)
+        {
+            _year = DateTime.Now.Year;
+            var runTime = System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription;
+
+            var module = await JS.InvokeAsync<IJSObjectReference>("import", "./Shared/MainLayout.razor.js");
+            MainLayoutModule = new Lazy<IJSObjectReference>(module);
+            await MainLayoutModule.Value.InvokeVoidAsync("SayHelloFromJs", $"Powered by {runTime!}");
+        }
     }
 
+    public async ValueTask DisposeAsync()
+    {
+        if (MainLayoutModule.IsValueCreated)
+        {
+            await MainLayoutModule.Value.DisposeAsync();
+        }
+    }
 }

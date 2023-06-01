@@ -1,7 +1,5 @@
 ﻿@page "/"
-@inject IJSRuntime JS
 @inject IndexRazor Http
-@implements IAsyncDisposable
 
 <PageTitle>Home</PageTitle>
 
@@ -30,31 +28,12 @@
 
 @code {
     private List<TimeLine> itemSource = new();
-    private Lazy<IJSObjectReference> IndexModule = new();
     private string Value { get; } = "text *italics* and **bold**";
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender)
-        {
-            var module = await JS.InvokeAsync<IJSObjectReference>("import", "./Pages/Index.razor.js");
-            IndexModule = new Lazy<IJSObjectReference>(module);
-            await IndexModule.Value.InvokeVoidAsync("SayHelloFromJs");
-        }
-    }
 
     protected override async Task OnInitializedAsync()
     {
         var items = await Http.FetchDataAsync();
         itemSource.AddRange(items);
-    }
-
-    public async ValueTask DisposeAsync()
-    {
-        if (IndexModule.IsValueCreated)
-        {
-            await IndexModule.Value.DisposeAsync();
-        }
     }
 }
 
