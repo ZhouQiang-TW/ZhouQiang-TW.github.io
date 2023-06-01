@@ -22,13 +22,27 @@
             @Body
         </MudContainer>
     </MudMainContent>
+    <MudAppBar Class="align-center" Bottom="true" Fixed="true" Elevation="1">
+        <MudElement>Copyright © @_year Share the ❤️ via hippieZhou</MudElement>
+        <MudText Typo="Typo.caption">Powered by .NET @_runTime</MudText>
+    </MudAppBar>
 </MudLayout>
 
 @code {
-    bool _drawerOpen = true;
+    private bool _drawerOpen = true;
+    private int _year;
+    private string _runTime;
 
     void DrawerToggle()
     {
         _drawerOpen = !_drawerOpen;
     }
+
+    protected override Task OnInitializedAsync()
+    {
+        _year = DateTime.Now.Year;
+        _runTime = System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription;
+        return base.OnInitializedAsync();
+    }
+
 }
