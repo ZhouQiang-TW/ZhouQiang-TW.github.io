@@ -50,7 +50,7 @@
             MainLayoutModule = new Lazy<IJSObjectReference>(module);
             
             var runTime = System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription;
-            await MainLayoutModule.Value.InvokeVoidAsync("showPrompt", $"Powered by {runTime!}");
+            await MainLayoutModule.Value.InvokeVoidAsync("SayHelloFromJs", $"Powered by {runTime!}");
         }
     }
 
