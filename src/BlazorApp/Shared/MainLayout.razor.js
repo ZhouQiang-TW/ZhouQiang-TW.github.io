@@ -1,3 +1,3 @@
-﻿export const SayHelloFromJs =(args)=>{
-    console.log(args);
-};
+﻿export function showPrompt(message) {
+    return prompt(message, 'Type anything here');
+}

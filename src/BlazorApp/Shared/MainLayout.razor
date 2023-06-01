@@ -31,8 +31,9 @@
 
 @code {
     private bool _drawerOpen = true;
-    private Lazy<IJSObjectReference> MainLayoutModule = new();
     private int _year;
+
+    private Lazy<IJSObjectReference> MainLayoutModule = new();
 
     void DrawerToggle()
     {
@@ -44,11 +45,12 @@
         if (firstRender)
         {
             _year = DateTime.Now.Year;
-            var runTime = System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription;
-
+            
             var module = await JS.InvokeAsync<IJSObjectReference>("import", "./Shared/MainLayout.razor.js");
             MainLayoutModule = new Lazy<IJSObjectReference>(module);
-            await MainLayoutModule.Value.InvokeVoidAsync("SayHelloFromJs", $"Powered by {runTime!}");
+            
+            var runTime = System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription;
+            await MainLayoutModule.Value.InvokeVoidAsync("showPrompt", $"Powered by {runTime!}");
         }
     }
 
