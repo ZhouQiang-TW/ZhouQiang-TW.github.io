@@ -24,7 +24,7 @@
             @Body
         </MudContainer>
     </MudMainContent>
-    <MudAppBar Class="align-center" Bottom="true" Fixed="true" Elevation="1">
+    <MudAppBar Style="color: black; background-color: white" Class="align-center" Bottom="true" Fixed="true" Elevation="1">
         <MudElement>Copyright © @_year Share the ❤️ via hippieZhou</MudElement>
     </MudAppBar>
 </MudLayout>
@@ -44,14 +44,18 @@
     {
         if (firstRender)
         {
-            _year = DateTime.Now.Year;
-            
             var module = await JS.InvokeAsync<IJSObjectReference>("import", "./Shared/MainLayout.razor.js");
             MainLayoutModule = new Lazy<IJSObjectReference>(module);
             
             var runTime = System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription;
             await MainLayoutModule.Value.InvokeVoidAsync("SayHelloFromJs", $"Powered by {runTime!}");
         }
+    }
+
+    protected override Task OnInitializedAsync()
+    {
+        _year = DateTime.Now.Year;
+        return base.OnInitializedAsync();
     }
 
     public async ValueTask DisposeAsync()
