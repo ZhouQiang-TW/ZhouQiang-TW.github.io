@@ -1,6 +1,6 @@
 ﻿using System.Net.Http.Json;
 using System.Text.Json;
-using BlazorApp.Converters;
+using BlazorApp.Core.Converters;
 using BlazorApp.Models;
 
 namespace BlazorApp.ViewModels;

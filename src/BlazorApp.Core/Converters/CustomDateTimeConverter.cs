@@ -2,7 +2,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace BlazorApp.Converters;
+namespace BlazorApp.Core.Converters;
 
 public class CustomDateTimeConverter : JsonConverter<DateTime>
 {

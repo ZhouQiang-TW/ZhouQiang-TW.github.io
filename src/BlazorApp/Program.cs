@@ -1,5 +1,4 @@
 using BlazorApp;
-using BlazorApp.HttpClients;
 using BlazorApp.ViewModels;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -24,8 +23,6 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 builder.Services.AddMudServices();
 builder.Services.AddMudMarkdownServices();
-
-builder.Services.AddScoped<BingWallpaperHttpClient>();
 
 builder.Services.AddScoped<IndexViewModel>();
 builder.Services.AddScoped<GalleryViewModel>();

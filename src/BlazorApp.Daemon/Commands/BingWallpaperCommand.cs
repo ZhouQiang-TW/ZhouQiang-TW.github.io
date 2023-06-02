@@ -1,50 +1,34 @@
-﻿using System.Net.Http.Json;
-using System.Text.Json;
-using System.Web;
-using BlazorApp.Converters;
-using BlazorApp.Models;
+﻿using System.Web;
+using BlazorApp.Core.Extensions;
+using BlazorApp.Daemon.Commands;
+using BlazorApp.Daemon.Services;
+using Microsoft.Extensions.Logging;
 
 namespace BlazorApp.HttpClients
 {
-    public class BingWallpaperHttpClient
+    public class BingWallpaperCommand : ICommand
     {
         private const string BASEADDRESS = "https://www.bing.com";
         private readonly HttpClient _client;
-        private readonly ILogger<BingWallpaperHttpClient> _logger;
+        private readonly IDataAccess _dataAccess;
+        private readonly ILogger<BingWallpaperCommand> _logger;
 
-        public BingWallpaperHttpClient(HttpClient httpClient, ILogger<BingWallpaperHttpClient> logger)
+        public BingWallpaperCommand(HttpClient httpClient, IDataAccess dataAccess, ILogger<BingWallpaperCommand> logger)
         {
             SetUpBingClient(httpClient);
             _client = httpClient;
+            _dataAccess = dataAccess;
             _logger = logger;
         }
 
-        public async Task<IReadOnlyList<Wallpaper>> GetBingWallpapers()
+        public async Task FetchDataAsync()
         {
             var requestUri = GenerateUri(_client).ToString();
 
             _logger.LogInformation("RequestUri:{RequestUri}", requestUri);
 
-            var jsonSerializerOptions = new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true,
-                Converters =
-                {
-                    new CustomDateTimeConverter("yyyyMMddHHmm"),
-                    new CustomDateOnlyConverter("yyyyMMdd")
-                }
-            };
-            try
-            {
-                var res = await new HttpClient().GetAsync(requestUri);
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e, e.Message);
-            }
-
-            var root = await _client.GetFromJsonAsync<WallpaperRoot>(requestUri, jsonSerializerOptions);
-            return root?.Images;
+            var json = await _client.GetJsonWithPrettifyAsync(requestUri);
+            await _dataAccess.SaveAsync($"{DateTime.Now:yyyy-M-d}.json", json);
         }
 
         private static void SetUpBingClient(HttpClient httpClient)
