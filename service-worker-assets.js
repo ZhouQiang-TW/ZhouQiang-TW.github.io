@@ -21,6 +21,10 @@
       "url": "manifest.json"
     },
     {
+      "hash": "sha256-qb91SdVSAXQzxDyG\/zpXtRnyW2jqthGx8aMB2FJj6bo=",
+      "url": "sample-data\/image.json"
+    },
+    {
       "hash": "sha256-4Yh4OTT5TEAPNyXEzOG+n5l2HPK294WFItz4SIelj88=",
       "url": "sample-data\/weather.json"
     },
@@ -57,7 +61,7 @@
       "url": "_framework\/icudt.dat.br"
     },
     {
-      "hash": "sha256-HtaDmnCeSuNdyzBoj0x+VM5Ylhvbl+MaRoie2o0RI4E=",
+      "hash": "sha256-+eN1F7v4WEiHh+yxUvTxEIRe1w\/Qm4kHIlLbZ9Mu\/+Q=",
       "url": "_framework\/blazor.boot.json.br"
     },
     {
@@ -65,7 +69,7 @@
       "url": "_framework\/BlazorApp.Core.dll.br"
     },
     {
-      "hash": "sha256-dsPI2nepRGK+5eohEKdKvzfSpY0Ye6bQOMGMVeHMEmY=",
+      "hash": "sha256-Qnxb5RDWzCKdkIUHi5kIkcDZIumrA1zbctS8+Ax7wmM=",
       "url": "_framework\/BlazorApp.dll.br"
     },
     {
@@ -1365,5 +1369,5 @@
       "url": "brotliloader.min.js"
     }
   ],
-  "version": "NO6rNPvl"
+  "version": "8vlT3P59"
 };
