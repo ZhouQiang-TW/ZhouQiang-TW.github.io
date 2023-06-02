@@ -7,12 +7,12 @@
 <MudGrid>
     @foreach (var wallpaper in wallpapers)
     {
-        <MudItem Style="display:flex;">
+        <MudItem xs="6" sm="3">
             <MudCard>
-                <MudCardMedia Image="https://www.bing.com/th?id=OHR.WorldOtterDay_EN-US4690332709_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp" Height="200"/>
+                <MudCardMedia Image=@string.Format("https://www.bing.com{0}",wallpaper.Url)/>
                 <MudCardContent>
-                    <MudText Typo="Typo.h5">2023-06-01</MudText>
-                    <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
+                    <MudText Typo="Typo.h5">@wallpaper.Fullstartdate.ToString("yyyy-M-d")</MudText>
+                    <MudText Typo="Typo.body2">@wallpaper.Title</MudText>
                 </MudCardContent>
             </MudCard>
         </MudItem>
@@ -21,5 +21,11 @@
 
 @code {
 
-    private List<object> wallpapers { get; } = new();
+    private List<Wallpaper> wallpapers { get; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var items = await ViewModel.FetchDataAsync();
+        wallpapers.AddRange(items);
+    }
 }

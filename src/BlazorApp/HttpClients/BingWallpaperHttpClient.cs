@@ -43,7 +43,7 @@ namespace BlazorApp.HttpClients
                 _logger.LogError(e, e.Message);
             }
 
-            var root = await _client.GetFromJsonAsync<Root>(requestUri, jsonSerializerOptions);
+            var root = await _client.GetFromJsonAsync<WallpaperRoot>(requestUri, jsonSerializerOptions);
             return root?.Images;
         }
 

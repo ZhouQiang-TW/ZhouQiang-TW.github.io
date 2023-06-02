@@ -1,6 +1,6 @@
 ﻿namespace BlazorApp.Models;
 
-public class Root
+public class WallpaperRoot
 {
     public List<Wallpaper> Images { get; set; }
 }
