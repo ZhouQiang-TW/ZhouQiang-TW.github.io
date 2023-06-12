@@ -23,10 +23,15 @@
         <MudContainer MaxWidth="MaxWidth.Large" Class="my-16 pt-16">
             @Body
         </MudContainer>
+        <MudContainer MaxWidth="MaxWidth.Large" Class="mt-16 mb-16 docs-footer">
+            <MudGrid Justify="Justify.Center">
+                <MudElement>Copyright © @_year Share the ❤️ via hippieZhou</MudElement>
+            </MudGrid>
+        </MudContainer>
+        <MudScrollToTop>
+            <MudFab Color="Color.Primary" Icon="@Icons.Material.Filled.ArrowUpward" />
+        </MudScrollToTop>
     </MudMainContent>
-    <MudAppBar Style="color: black; background-color: white" Class="align-center" Bottom="true" Fixed="true" Elevation="1">
-        <MudElement>Copyright © @_year Share the ❤️ via hippieZhou</MudElement>
-    </MudAppBar>
 </MudLayout>
 
 @code {

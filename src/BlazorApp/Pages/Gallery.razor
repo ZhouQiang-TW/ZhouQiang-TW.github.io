@@ -4,12 +4,12 @@
 
 <MudText Typo="Typo.h3" GutterBottom="true">Gallery</MudText>
 <MudText Class="mb-8">This component demonstrates fetching data from the bing!</MudText>
-<MudGrid>
+<MudGrid Class="mt-8">
     @foreach (var wallpaper in wallpapers)
     {
-        <MudItem xs="6" sm="3">
-            <MudCard>
-                <MudCardMedia Image=@string.Format("https://www.bing.com{0}",wallpaper.Url)/>
+        <MudItem xs="12" sm="3" md="4">
+            <MudCard Elevation="25" Class="rounded-lg pb-4">
+                <MudCardMedia Image=@string.Format("https://www.bing.com{0}", wallpaper.Url)/>
                 <MudCardContent>
                     <MudText Typo="Typo.h5">@wallpaper.Fullstartdate.ToString("yyyy-M-d")</MudText>
                     <MudText Typo="Typo.body2">@wallpaper.Title</MudText>

@@ -59,7 +59,6 @@ public class IndexViewModel
             },
         };
 
-        await Task.Delay(TimeSpan.FromSeconds(4));
         return await Task.FromResult(items);
     }
 }

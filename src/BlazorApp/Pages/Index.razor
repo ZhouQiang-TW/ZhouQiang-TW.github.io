@@ -4,26 +4,24 @@
 <PageTitle>Home</PageTitle>
 
 <MudText Typo="Typo.h3" GutterBottom="true">Hello, world!</MudText>
-<MudText Class="mb-8">Welcome to my new web site, powered by MudBlazor!</MudText>
-<MudAlert Severity="Severity.Normal">You can find documentation and examples on our website here: <MudLink Href="https://mudblazor.com" Typo="Typo.body2" Color="Color.Inherit"><b>www.mudblazor.com</b></MudLink></MudAlert>
+<MudText Class="mb-8">Welcome to my new web site, powered by MudBlazor!, i guess i cant fill it in for you.</MudText>
 
-<MudText Typo="Typo.h3">My markdown</MudText>
-<MudMarkdown Value="@Value" />
-
-<MudTimeline Class="mt-8">
-    @foreach (var item in itemSource)
-    {
-        <MudTimelineItem Color="Color.Info" Size="Size.Small">
-            <ItemOpposite>
-                <MudText Color="Color.Info" Typo="Typo.h5">@item.Year</MudText>
-            </ItemOpposite>
-            <ItemContent>
-                <MudText Color="Color.Info" Typo="Typo.h6" GutterBottom="true">@item.Info</MudText>
-                <MudText>@item.Desc</MudText>
-            </ItemContent>
-        </MudTimelineItem>
-    }
-</MudTimeline>
+<MudGrid Class="mt-8">
+    <MudTimeline>
+        @foreach (var item in itemSource)
+        {
+            <MudTimelineItem Color="Color.Info" Size="Size.Small">
+                <ItemOpposite>
+                    <MudText Color="Color.Info" Typo="Typo.h5">@item.Year</MudText>
+                </ItemOpposite>
+                <ItemContent>
+                    <MudText Color="Color.Info" Typo="Typo.h6" GutterBottom="true">@item.Info</MudText>
+                    <MudText>@item.Desc</MudText>
+                </ItemContent>
+            </MudTimelineItem>
+        }
+    </MudTimeline>
+</MudGrid>
 
 
 @code {
