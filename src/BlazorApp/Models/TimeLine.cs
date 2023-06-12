@@ -2,7 +2,7 @@
 
 public class TimeLine
 {
-    public int Year { get; init; }
+    public string Year { get; init; }
     public string Info { get; init; }
     public string Desc { get; init; }
 }

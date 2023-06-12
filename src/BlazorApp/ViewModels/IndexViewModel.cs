@@ -8,55 +8,32 @@ public class IndexViewModel
     {
         var items = new List<TimeLine>()
         {
-            new TimeLine()
+            new()
             {
-                Year = 2023,
-                Info = "Atom Towns",
-                Desc =
-                    "Construction of the town of Pripyat, one of 9 “atom towns” begins, to be inhabited by future employees of the nuclear power plants."
+                Year = "2022 — Present",
+                Info = "Consultant",
+                Desc = "As a consultant in thoughtworks, mainly committed to the transformation and upgrading of outdated systems."
             },
-            new TimeLine()
+            new()
             {
-                Year = 2022,
-                Info = "Atom Towns",
+                Year = "2019 — 2022",
+                Info = ".NET Backend Developer",
                 Desc =
-                    "Construction of the town of Pripyat, one of 9 “atom towns” begins, to be inhabited by future employees of the nuclear power plants."
+                    "From Beijing to Wuhan, I worked as a developer for two companies and accumulated a lot of experience in .net core development."
             },
-            new TimeLine()
+            new()
             {
-                Year = 2021,
-                Info = "Atom Towns",
+                Year = "2016 — 2019",
+                Info = "WPF Developer",
                 Desc =
-                    "Construction of the town of Pripyat, one of 9 “atom towns” begins, to be inhabited by future employees of the nuclear power plants."
+                    "Worked as a WPF developer in a traditional company, mainly engaged in the research and development of video surveillance related products."
             },
-            new TimeLine()
+            new()
             {
-                Year = 2020,
-                Info = "Atom Towns",
-                Desc =
-                    "Construction of the town of Pripyat, one of 9 “atom towns” begins, to be inhabited by future employees of the nuclear power plants."
-            },
-            new TimeLine()
-            {
-                Year = 2019,
-                Info = "Atom Towns",
-                Desc =
-                    "Construction of the town of Pripyat, one of 9 “atom towns” begins, to be inhabited by future employees of the nuclear power plants."
-            },
-            new TimeLine()
-            {
-                Year = 2018,
-                Info = "Atom Towns",
-                Desc =
-                    "Construction of the town of Pripyat, one of 9 “atom towns” begins, to be inhabited by future employees of the nuclear power plants."
-            },
-            new TimeLine()
-            {
-                Year = 2027,
-                Info = "Atom Towns",
-                Desc =
-                    "Construction of the town of Pripyat, one of 9 “atom towns” begins, to be inhabited by future employees of the nuclear power plants."
-            },
+                Year = "2015 — 2016",
+                Info = "UAP Developer",
+                Desc = "Work as an intern in a game company in Wuhan and accumulate work experience"
+            }
         };
 
         return await Task.FromResult(items);

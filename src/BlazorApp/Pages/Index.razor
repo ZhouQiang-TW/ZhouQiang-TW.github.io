@@ -7,15 +7,16 @@
 <MudText Class="mb-8">Welcome to my new web site, powered by MudBlazor!, i guess i cant fill it in for you.</MudText>
 
 <MudGrid Class="mt-8">
-    <MudTimeline>
+    <MudTimeline TimelineAlign="TimelineAlign.End" TimelinePosition="TimelinePosition.Alternate" Dense="true">
         @foreach (var item in itemSource)
         {
-            <MudTimelineItem Color="Color.Info" Size="Size.Small">
+            var color = itemSource.IndexOf(item) == 0 ? Color.Primary : Color.Default;
+            <MudTimelineItem Color="@color" Size="Size.Small">
                 <ItemOpposite>
-                    <MudText Color="Color.Info" Typo="Typo.h5">@item.Year</MudText>
+                    <MudText Color="@color" Typo="Typo.h5">@item.Year</MudText>
                 </ItemOpposite>
                 <ItemContent>
-                    <MudText Color="Color.Info" Typo="Typo.h6" GutterBottom="true">@item.Info</MudText>
+                    <MudText Color="@color" Typo="Typo.h6" GutterBottom="true">@item.Info</MudText>
                     <MudText>@item.Desc</MudText>
                 </ItemContent>
             </MudTimelineItem>
