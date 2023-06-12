@@ -8,7 +8,7 @@
   "resources": {
     "assembly": {
       "BlazorApp.Core.dll": "sha256-x8\/i212s0b06Mbe5osVNJVeFSHcGsFhjbT9WRTHa7uU=",
-      "BlazorApp.dll": "sha256-h4QLvUIeREmb+lvkV0uWe+xOvwk7Cf7yWskW+it+GTY=",
+      "BlazorApp.dll": "sha256-UmBfqhpMMBf1jSEwECTFKqckDjbLH90mqMOXD6e18h8=",
       "Markdig.dll": "sha256-iKKz5I0C1crIJpaE817LsfaIGinS7O1szh3CsTyQ8Bc=",
       "Microsoft.AspNetCore.Components.dll": "sha256-bO+7kNnTjQBV+1y4rTFnhwzC+lPT00cRbj4moP5Wwsc=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-qYDp7H6KGS\/KmClvjvd2S\/ziNhQqipdCsvIXlSGEGMg=",
